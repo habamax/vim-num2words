@@ -19,6 +19,11 @@ func! num2words#convert(num, ...) abort
 	let result = get(a:, 1, [])
 	let level = get(a:, 2, 0)
 
+
+	if a:num == 0 && level == 0
+		return ['ноль']
+	endif
+
 	let level_result = []
 
 	let h = a:num%1000
