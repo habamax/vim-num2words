@@ -1,0 +1,16 @@
+= Convert numbers to words
+
+*WIP* only russian is supported as of now.
+
+Plugin replaces number under cursor to words:
+
+	435663322 -> четыреста тридцать пять миллионов шестьсот шестьдесят три тысячи триста двадцать два
+
+== Usage
+Place cursor over a number and run `:Num2Words` command.
+
+== TODO
+* Support other languages (English, Spanish, Italian, French, ...)
+* Support visual selection
+* Support copy to clipboard/unnamed register instead of replacing text in a buffer
+* Support currency (рублей, рубля, etc)
