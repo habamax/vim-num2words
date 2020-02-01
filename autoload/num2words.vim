@@ -85,7 +85,7 @@ func! num2words#ccy(num) abort
 	return result
 endfunc
 
-func! num2words#replace() abort
+func! num2words#replace(...) abort
 	let number = s:get_number()
 	if !number.is_num
 		echom "[" number.num "] is not a number"
@@ -93,6 +93,9 @@ func! num2words#replace() abort
 	endif
 
 	let words = join(s:flatten(num2words#convert(number.num)))
+	if get(a:, 1, "") == "CCY"
+		let words .= ' ' . num2words#ccy(number.num)
+	endif
 	let line = getline('.')
 	call setline('.',
 				\ strpart(line, 0, number.start)
