@@ -12,6 +12,7 @@ let s:levels = [
 			\ ["триллион", "триллиона", "триллионов"]
 			\ ]
 
+"" TODO: this is wrong!!! echo num2words#convert(60000000)
 "" call num2words#convert(12342)
 "" returns list of lists
 "" [['двенадцать','тысяч'], ['триста', 'сорок', 'два']]
