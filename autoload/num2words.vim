@@ -79,7 +79,7 @@ func! num2words#ccy(num) abort
 	let n = a:num%10
 	if n == 1
 		let result = 'рубль'
-	elseif n < 5
+	elseif n > 0 && n < 5
 		let result = 'рубля'
 	endif
 	return result
