@@ -12,7 +12,6 @@ let s:levels = [
 			\ ["триллион", "триллиона", "триллионов"]
 			\ ]
 
-"" TODO: this is wrong!!! echo num2words#convert(60000000)
 "" call num2words#convert(12342)
 "" returns list of lists
 "" [['двенадцать','тысяч'], ['триста', 'сорок', 'два']]
@@ -54,7 +53,7 @@ func! num2words#convert(num, ...) abort
 		endif
 	endif
 
-	if level > 0
+	if level > 0 && h > 0
 		if n == 0 || n > 4
 			call add(level_result, s:levels[level][2])
 		elseif n == 1
@@ -71,6 +70,7 @@ func! num2words#convert(num, ...) abort
 		return num2words#convert(next_num, result, level+1)
 	else
 		return reverse(result)
+		" return s:fix_convert_result(result)
 	endif
 
 endfunc
@@ -148,4 +148,3 @@ func! s:flatten(list) abort
 	endfor
 	return val	
 endfunc
-
