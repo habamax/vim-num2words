@@ -10,7 +10,7 @@ Plugin replaces number under cursor to words:
 Place cursor over a number and run `:Num2Words` command.
 
 == TODO
-* Support other languages (English, Spanish, Italian, French, ...)
-* Support visual selection
-* Support copy to clipboard/unnamed register instead of replacing text in a buffer
-* Support currency (рублей, рубля, etc)
+* Support other languages (English, Spanish, Italian, French, ...).
+* Support visual selection.
+* Support copy to clipboard/unnamed register instead of replacing text in a buffer.
+* Support currency (рублей, рубля, etc).
